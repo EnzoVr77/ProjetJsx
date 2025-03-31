@@ -2,29 +2,20 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
+import en from './traduction/en.json';
+import fr from './traduction/fr.json';
+
 const resources = {
-    en: {
-        translation: {
-            welcome: "Welcome",
-            search: "Search...",
-            details: "View details",
-        },
-    },
-    fr: {
-        translation: { 
-            welcome: "Bienvenue",
-            search: "Rechercher...",
-            details: "Voir les détails",
-        },
-    },
+    en: { translation: en },
+    fr: { translation: fr },
 };
 
 i18n
-    .use(LanguageDetector) // Détecte la langue du navigateur
-    .use(initReactI18next) // Initialise react-i18next
+    .use(LanguageDetector)
+    .use(initReactI18next)
     .init({
         resources,
-        fallbackLng: 'en', // Langue par défaut
+        fallbackLng: 'fr',
         interpolation: { escapeValue: false },
     });
 
