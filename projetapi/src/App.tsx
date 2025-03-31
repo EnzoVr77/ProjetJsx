@@ -6,6 +6,8 @@ import './App.css';
 
 import Home from './pages/Home';
 import Details from './pages/Details';
+import Albums from './pages/Albums.tsx';
+import Chanteurs from './pages/Chanteurs.tsx';
 
 function App() {
     const [count, setCount] = useState(0);
@@ -42,12 +44,20 @@ function App() {
                         <li>
                             <Link to="/details">Détails</Link>
                         </li>
+                        <li>
+                            <Link to="/albums">Albums</Link>
+                        </li>
+                        <li>
+                            <Link to="/chanteurs">Chanteurs</Link>
+                        </li>
                     </ul>
                 </nav>
 
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/details" element={<Details />} />
+                    <Route path="/chanteurs" element={<Chanteurs />} />
+                    <Route path="/albums" element={<Albums />} />
                 </Routes>
             </>
         </Router>
