@@ -1,5 +1,5 @@
-const Home = () => {
-    return <h2>Page d'Accueil</h2>;
-};
+import ShowGenre from "../components/organisms/ShowGenre";
+
+const Home = () => <ShowGenre />;
 
 export default Home;

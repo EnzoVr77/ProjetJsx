@@ -4,4 +4,5 @@
 
 ### Pour lancer le projet : 
 > npm run build\
-> npm run dev
+> npm run dev\
+> Installer une extension qui désactive le CORS sur son navigateur.
