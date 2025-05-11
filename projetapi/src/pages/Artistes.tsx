@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Title from "../components/atoms/Title";
+
 
 type Artist = {
     id: number;
@@ -24,10 +26,12 @@ export default function Artists() {
             <Title text="Liste des Artistes" />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-screen-lg mx-auto">
                 {artists.map((artist) => (
-                    <div key={artist.id} className="bg-white p-4 rounded-lg shadow-lg dark:hover:bg-fuchsia-200">
-                        <img src={artist.picture_medium} alt={artist.name} className="w-full h-48 object-cover rounded-md" />
-                        <h3 className="mt-2 text-lg font-semibold text-black text-center">{artist.name}</h3>
-                    </div>
+                    <Link to={`/artist/${artist.id}`} key={artist.id}>
+                        <div className="bg-white p-4 rounded-lg shadow-lg hover:bg-fuchsia-200 transition-all">
+                            <img src={artist.picture_medium} alt={artist.name} className="w-full h-48 object-cover rounded-md" />
+                            <h3 className="mt-2 text-lg font-semibold text-black text-center">{artist.name}</h3>
+                        </div>
+                    </Link>
                 ))}
             </div>
         </div>
