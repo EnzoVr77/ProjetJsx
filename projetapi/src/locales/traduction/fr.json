@@ -1,5 +1,7 @@
 {
-  "welcome": "Bienvenue",
-  "search": "Rechercher...",
-  "details": "Voir les détails"
+  "nontrouve": "Aucun résultat trouvé",
+  "albums": "Albums",
+  "artists": "Artistes",
+  "recherche": "Rechercher un genre...",
+  "top_artists": "Top Artistes"
 }
